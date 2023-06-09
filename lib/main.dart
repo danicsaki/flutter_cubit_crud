@@ -11,29 +11,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return MultiBlocProvider(
-  //     providers: [
-  //       BlocProvider<PetsCubit>(
-  //         create: (BuildContext context) => PetsCubit(PetsRepository()),
-  //       ),
-  //     ],
-  //     child: MaterialApp(
-  //       title: 'Flutter Demo',
-  //       theme: ThemeData(
-  //         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-  //         useMaterial3: true,
-  //       ),
-  //       home: const MyHomePage(title: 'Flutter Demo Home Page'),
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider(
-      create: (context) => PetsRepository(),
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider<PetsRepository>(
+            create: (context) => PetsRepository()),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -59,95 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // context.read<PetsCubit>().getPets();
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //       appBar: AppBar(
-  //         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-  //         title: Text(widget.title),
-  //       ),
-  //       body: SingleChildScrollView(
-  //         child: Column(
-  //           mainAxisAlignment: MainAxisAlignment.center,
-  //           children: <Widget>[
-  //             BlocBuilder<PetsCubit, PetsState>(
-  //               builder: (context, state) {
-  //                 if (state is PetsLoading || state is PetsInitial) {
-  //                   return const Center(child: CircularProgressIndicator());
-  //                 } else if (state is PetsLoaded) {
-  //                   // return Text(state.pets.toString());
-  //                   return ListView.builder(
-  //                       itemCount: state.pets.length,
-  //                       shrinkWrap: true,
-  //                       itemBuilder: (context, index) {
-  //                         return Text(state.pets[index].name);
-  //                       });
-  //                 } else {
-  //                   return const Text('Something whent wrong');
-  //                 }
-  //               },
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //       floatingActionButton: Column(
-  //         mainAxisAlignment: MainAxisAlignment.end,
-  //         children: [
-  //           FloatingActionButton(
-  //             onPressed: () {
-  //               context.read<PetsCubit>().addPet(
-  //                     const Pet(
-  //                       age: 4,
-  //                       characteristics: 'new test',
-  //                       coordinates: [0, 0],
-  //                       description: 'new test',
-  //                       image: 'new test',
-  //                       name: 'new pet',
-  //                       race: 'bulldog',
-  //                       status: 'lost',
-  //                       type: 'dog',
-  //                     ),
-  //                   );
-  //             },
-  //             child: const Text('add'),
-  //           ),
-  //           const SizedBox(
-  //             height: 8,
-  //           ),
-  //           FloatingActionButton(
-  //             onPressed: () {
-  //               context.read<PetsCubit>().updatePet(
-  //                     '637a484c84b3d68c8f10bccc',
-  //                     const Pet(
-  //                       age: 4,
-  //                       characteristics: 'new edit',
-  //                       coordinates: [0, 0],
-  //                       description: 'new edit',
-  //                       image: 'new edit',
-  //                       name: 'new edit',
-  //                       race: 'bulldog',
-  //                       status: 'lost',
-  //                       type: 'dog',
-  //                     ),
-  //                   );
-  //             },
-  //             child: const Text('update'),
-  //           ),
-  //           const SizedBox(
-  //             height: 8,
-  //           ),
-  //           FloatingActionButton(
-  //             onPressed: () {
-  //               context.read<PetsCubit>().deletePet('637a484c84b3d68c8f10bccc');
-  //             },
-  //             child: const Text('delete'),
-  //           ),
-  //         ],
-  //       ));
-  // }
 
   @override
   Widget build(BuildContext context) {
