@@ -14,7 +14,7 @@ class Failure extends Equatable {
 
   factory Failure.fromJson(Map<String, dynamic> json) {
     return Failure(
-      type: json['type'],
+      type: json['type'] ?? 'error',
       message: json['message'],
     );
   }
