@@ -32,9 +32,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
         create: (_) => PetsCubit(
             repository: RepositoryProvider.of<PetsRepository>(context))
           ..getPets(),
-        child: const Scaffold(
+        child: Scaffold(
           body: Center(
-            child: Text('Dashboard Screen'),
+            child: BlocBuilder<NotificationCubit, String>(
+              builder: (context, state) {
+                return Text(state);
+              },
+            ),
           ),
         ));
   }

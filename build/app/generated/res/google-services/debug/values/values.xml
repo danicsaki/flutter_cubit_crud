@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">641409149431-p7o5b6bmiiptu60fs1ulilifnn4lgrkr.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">641409149431</string>
+    <string name="google_api_key" translatable="false">AIzaSyBr-9CWSmOUqo3C36Rn3VDgxJ0Jebip78c</string>
+    <string name="google_app_id" translatable="false">1:641409149431:android:4cdacd238fff75559226f2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBr-9CWSmOUqo3C36Rn3VDgxJ0Jebip78c</string>
+    <string name="google_storage_bucket" translatable="false">plantingapp-ca2aa.appspot.com</string>
+    <string name="project_id" translatable="false">plantingapp-ca2aa</string>
+</resources>
