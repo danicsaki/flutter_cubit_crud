@@ -102,27 +102,27 @@ class PetListView extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: Column(
+      floatingActionButton: const Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           // FloatingActionButton(
           //   child: const Icon(Icons.delete),
           //   onPressed: () => context.read<PetsCubit>().deletePet(selected!.id!),
           // ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           // FloatingActionButton(
           //     child: const Icon(Icons.pets),
           //     onPressed: () {
           //       context.read<PetsCubit>().updatePet(selected!.id!, selected!);
           //     }),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           // FloatingActionButton(
           //   child: const Icon(Icons.add),
           //   onPressed: () => context.read<PetsCubit>().addPet(selected!),
           // ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           // FloatingActionButton(
           //   child: const Icon(Icons.refresh),
           //   onPressed: () => context.read<PetsCubit>().getPets(),

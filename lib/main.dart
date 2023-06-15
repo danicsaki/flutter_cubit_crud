@@ -3,7 +3,6 @@ import 'package:cubit_test/cubits/cubits.dart';
 import 'package:cubit_test/firebase_options.dart';
 import 'package:cubit_test/repositories/pets/pets_repository.dart';
 import 'package:cubit_test/repositories/user/user_repository.dart';
-import 'package:cubit_test/screens/home/home_screen.dart';
 import 'package:cubit_test/screens/screens.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -51,7 +50,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           onGenerateRoute: AppRouter.onGenerateRoute,
-          initialRoute: HomeScreen.routeName,
+          initialRoute: NfcScreen.routeName,
         ),
       ),
     );

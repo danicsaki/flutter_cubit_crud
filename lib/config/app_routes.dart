@@ -13,8 +13,8 @@ class AppRouter {
         return LoginScreen.route();
       case DashboardScreen.routeName:
         return DashboardScreen.route();
-      // case CheckoutScreen.routeName:
-      //   return CheckoutScreen.route();
+      case NfcScreen.routeName:
+        return NfcScreen.route();
       // case DeliveryTimeScreen.routeName:
       //   return DeliveryTimeScreen.route();
       // case FilterScreen.routeName:

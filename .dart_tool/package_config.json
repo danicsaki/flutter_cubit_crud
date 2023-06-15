@@ -176,6 +176,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nfc_manager",
+      "rootUri": "file:///Users/csaki/.pub-cache/hosted/pub.dev/nfc_manager-3.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/csaki/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
@@ -254,7 +260,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-06-13T15:28:07.726860Z",
+  "generated": "2023-06-14T18:28:38.607691Z",
   "generator": "pub",
   "generatorVersion": "3.0.2"
 }
