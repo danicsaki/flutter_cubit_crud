@@ -41,6 +41,9 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (context) => NotificationCubit()..initialize(),
+          ),
+          BlocProvider(
+            create: (context) => LoginCubit(),
           )
         ],
         child: MaterialApp(
@@ -50,7 +53,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           onGenerateRoute: AppRouter.onGenerateRoute,
-          initialRoute: NfcScreen.routeName,
+          initialRoute: HomeScreen.routeName,
         ),
       ),
     );
